@@ -1,7 +1,8 @@
 import React, { useEffect} from "react";
 import "./App.css";
 import { connect } from 'react-redux';
-import { fetchSmurfVillage} from '../actions'
+import { fetchSmurfVillage} from '../actions';
+import AddForm from "./AddForm";
 
 
 const App = (props) => {
@@ -26,6 +27,7 @@ const App = (props) => {
               )
           })}
         </div>
+        <AddForm />
       </div>
     );
   }
