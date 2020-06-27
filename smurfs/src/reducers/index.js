@@ -1,4 +1,4 @@
-import {FETCHING_SMURF_VILLAGE_START, FETCHING_SMURF_VILLAGE_SUCCESS,FETCHING_SMURF_VILLAGE_FAIL } from '../actions'
+import {FETCHING_SMURF_VILLAGE_START, FETCHING_SMURF_VILLAGE_SUCCESS,FETCHING_SMURF_VILLAGE_FAIL, SUBMIT_FORM_START,SUBMIT_FORM_SUCCESS,SUBMIT_FORM_FAIL } from '../actions'
 
 const initialState = {
     smurfs:[],
@@ -11,6 +11,19 @@ const initialState = {
 export const rootReducer = (state = initialState, action) => {
 
     switch(action.type){
+        case SUBMIT_FORM_START:
+            return{
+                ...state,
+
+            }
+        case SUBMIT_FORM_SUCCESS:
+        return{
+                ...state,
+        }
+        case SUBMIT_FORM_FAIL:
+            return{
+                ...state,
+            }
         case FETCHING_SMURF_VILLAGE_START:
             return{
                 ...state,

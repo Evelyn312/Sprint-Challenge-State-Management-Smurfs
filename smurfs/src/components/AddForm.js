@@ -4,28 +4,20 @@ import { submitForm} from '../actions';
 
 
 const AddForm = (props) => {
-
     const [form, setForm] = useState({name:'', age: '', height: ''});
 
-
     const handleChanges = (e) => {
-        setForm(
-            {
-                ...form,
-                [e.target.name]: e.target.value
-            }
-        )
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
     }
 
     const submitHandler = (e) => {
         e.preventDefault();
-        submitForm(form)
-
+        props.submitForm(form);
     }
-    
-    
-    
-   
+
     return(
         <>
         <form onSubmit={submitHandler}>
