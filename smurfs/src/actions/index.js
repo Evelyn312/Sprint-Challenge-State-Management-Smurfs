@@ -10,7 +10,7 @@ export const SUBMIT_FORM = 'SUBMIT_FORM';
 export const submitForm = submitForm => {
     console.log("testing", submitForm)
     axios
-        .post ('http://localhost:3333/smurfs',{submitForm})
+        .post ('http://localhost:3333/smurfs', submitForm)
         .then(res => {
             console.log('res', res);
         })
